@@ -5,7 +5,42 @@
   "projects": {
     "ngportfolio": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "skipTests": true,
+          "type": "component"
+        },
+        "@schematics/angular:service": {
+          "skipTests": true,
+          "type": "service"
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true,
+          "type": "directive"
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true,
+          "type": "pipe"
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true,
+          "type": "guard"
+        },
+        "@schematics/angular:resolver": {
+          "skipTests": true,
+          "type": "resolver"
+        },
+        "@schematics/angular:class": {
+          "skipTests": true,
+          "type": "model"
+        },
+        "@schematics/angular:interface": {
+          "type": "interface"
+        },
+        "@schematics/angular:enum": {
+          "type": "enum"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
