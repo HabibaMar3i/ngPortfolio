@@ -1,23 +1,14 @@
 <div class="flex flex-col gap-4 p-4 items-center justify-center w-[600px] mx-auto my-6">
     <span class="text-3xl font-bold me-auto">My Projects</span>
-
-
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10 mx-auto">
-    <div class="relative max-w-xl mx-auto cursor-pointer" routerLink="/projects">
-        <img class="h-64 w-full object-cover rounded-md"
-            src="https://images.unsplash.com/photo-1680725779155-456faadefa26" alt="Random image">
+    @for (project of projects; track project.id) {
+    <div class="relative max-w-xl md:mx-auto cursor-pointer mx-[20px]" routerLink="/projects">
+        <img class="h-64 w-[350px] object-cover rounded-md" [src]="project.imageUrl" [alt]="project.title">
         <div class="absolute inset-0 bg-gray-700 opacity-60 rounded-md"></div>
         <div class="absolute inset-0 flex items-center justify-center">
-            <h2 class="text-white text-3xl font-bold ms-2">Get Lost in Mountains</h2>
+            <h2 class="text-white text-3xl font-bold ms-2 text-center">{{project.title}}</h2>
         </div>
     </div>
-    <div class="relative max-w-xl mx-auto cursor-pointer" routerLink="/projects">
-        <img class="h-64 w-full object-cover rounded-md"
-            src="https://images.unsplash.com/photo-1680725779155-456faadefa26" alt="Random image">
-        <div class="absolute inset-0 bg-gray-700 opacity-60 rounded-md"></div>
-        <div class="absolute inset-0 flex items-center justify-center">
-            <h2 class="text-white text-3xl font-bold ms-2">Get Lost in Mountains</h2>
-        </div>
-    </div>
+    }
 </div>
