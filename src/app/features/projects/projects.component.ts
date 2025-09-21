@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { Project } from '../../core/models/project.interface';
-import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-projects',
-  imports: [RouterLink],
+  imports: [],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css'
 })
